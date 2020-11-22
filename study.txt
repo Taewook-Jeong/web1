@@ -1,3 +1,4 @@
+		purpose?
 git
 서버 저장, 변경사항 저장, 공동 작업
 repository 개념
@@ -9,4 +10,6 @@ git page(web server hosting)을 이용해 web site 제작
 
 기타등등... 해보는 중임.
 
-css는 html tag를 조작하는 개념.
+css property, selector개념
+selecter tag, class, id 등등 각각의 개념 우선순위(왜?)
+box model
