@@ -8,3 +8,5 @@ window에서 git 설치(git command이용 가능)
 git page(web server hosting)을 이용해 web site 제작
 
 기타등등... 해보는 중임.
+
+css는 html tag를 조작하는 개념.
