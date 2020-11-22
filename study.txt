@@ -1,0 +1,10 @@
+git
+서버 저장, 변경사항 저장, 공동 작업
+repository 개념
+add, commit, push 개념
+window에서 git 설치(git command이용 가능)
+로컬과 원격 연결(싸지방에서 git clone으로 받기)
+
+git page(web server hosting)을 이용해 web site 제작
+
+기타등등... 해보는 중임.
