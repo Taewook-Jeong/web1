@@ -10,23 +10,48 @@
     h1 {
       font-size: 40px;
       text-align: center;
+      border-bottom: 1px solid gray;
+      margin:0;
+      padding:20px;
     }
+    /*    selector study
     .saw {
-      color:blue;
+      color:pink;
+    }
+    #PID {
+      color: yellow;
+    }
+    */
+    #grid{
+      display: grid;
+      grid-template-columns: 150px 1fr;
+    }
+    #grid ol{   /* every "ol" in "#grid"*/
+      padding-left: 33px;
+    }
+    #grid #article{ /*just "#article" is OK. to make sure*/
+      padding-left:50px;
     }
   </style>
 </head>
 <body>
-	<h1><a href="index.html">Taewook Jeong</a></h1>
-	<ol>
-		<li><a href="1.html" class="saw">Robotics</a></li>
-		<li><a href="2.html" class="saw">Mathmatics</a></li>
-		<li><a href="3.html">BlackPink</a></li>
-	</ol>
-	<h2>Mathmatics</h2>
-	<p>
-		LOL
-	</p>
+  <h1><a href="index.html">Taewook Jeong</a></h1>
+  <div id="grid">
+    <ol>
+      <!--li><a href="1.html" class="saw" id="PID">Robotics</a></li>    selector study
+      <li><a href="2.html" class="saw">Mathmatics</a></li-->
+      <li><a href="1.html">Robotics</a></li>
+      <li><a href="2.html">Mathmatics</a></li>
+      <li><a href="3.html">BlackPink</a></li>
+    </ol>
+    <div id="article">
+        <h2>Mathmatics</h2>
+        <p>
+            Mathematics (from Greek: μάθημα, máthēma, 'knowledge, study, learning') includes the study of such topics as quantity (number theory),[1] structure (algebra),[2] space (geometry),[1] and change (mathematical analysis).[3][4][5] It has no generally accepted definition.[6][7]
+            Mathematicians seek and use patterns[8][9] to formulate new conjectures; they resolve the truth or falsity of such by mathematical proof. When mathematical structures are good models of real phenomena, mathematical reasoning can be used to provide insight or predictions about nature. Through the use of abstraction and logic, mathematics developed from counting, calculation, measurement, and the systematic study of the shapes and motions of physical objects. Practical mathematics has been a human activity from as far back as written records exist. The research required to solve mathematical problems can take years or even centuries of sustained inquiry.
+        </p>
+    </div>
+  </div>
   <p>
     <div id="disqus_thread"></div>
     <script>
