@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+}
+a {
+  color:pink;
+  text-decoration: none;
+}
+h1 {
+  font-size: 40px;
+  text-align: center;
+  border-bottom: 1px solid gray;
+  margin:0;
+  padding:20px;
+}
+/*    selector study
+.saw {
+  color:pink;
+}
+#PID {
+  color: yellow;
+}
+*/
+#grid{
+  display: grid;
+  grid-template-columns: 150px 1fr;
+}
+#grid ol{   /* every "ol" in "#grid"*/
+  padding-left: 33px;   /* adjust to use inspect in web page*/
+  border-right:1px solid gray;
+  width:100px;
+  margin:0;
+  padding:20px;
+}
+#grid #article{   /*just "#article" is OK. to make sure*/
+  padding-left:50px;
+}
+@media(max-width:800px){
+  #grid{
+  display: block;
+  }
+  #grid ol{   /* every "ol" in "#grid"*/
+  border-right:none;
+ }
+ h1 {
+  border-bottom:none;
+}
