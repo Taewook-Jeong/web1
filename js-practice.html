@@ -4,6 +4,35 @@
   <title>Taewook Jeong's Robotics</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
+  <script>
+    // why this대신 self? this의 경우 script가 포함된 element를 가르킴.
+    // 따라서 독립적으로 function을 만든 경우 '전역객체'를 가르킴.
+    function nightDayHandler(self){  
+      var target = document.querySelector('body');
+      if(self.value === 'night'){
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        self.value = 'day';
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length) {
+          alist[i].style.color = 'powderblue';
+          i = i + 1;
+        }
+      }
+      else{
+        target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+        self.value = 'night';
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length) {
+          alist[i].style.color = 'blue';
+          i = i + 1;
+        }
+      }
+    }
+  </script>
 </head>
 <body>
   <h1><a href="index.html">Taewook Jeong</a></h1>
@@ -17,7 +46,7 @@
     document.querySelector('body').style.color = 'black';
   "-->
 
-  <!--  "1 button"
+  <!--  "1 button/using condition"
     input id="night_day" type="button" value="night" onclick="
     if(document.querySelector('#night_day').value === 'night'){
       document.querySelector('body').style.backgroundColor = 'black';
@@ -31,19 +60,37 @@
     }
   "-->
 
-<input type="button" value="night" onclick="
-var target = document.querySelector('body');
-if(this.value === 'night'){
-  target.style.backgroundColor = 'black';
-  target.style.color = 'white';
-  this.value = 'day';
-}
-else{
-  target.style.backgroundColor = 'white';
-  target.style.color = 'black';
-  this.value = 'night';
-}
-">
+  <!--  "1button & 중첩제거/using this and variable
+    & 각 모드에서 모든 a element의 color 변경/using while loop"
+    <input type="button" value="night" onclick="
+    var target = document.querySelector('body');
+    if(this.value === 'night'){
+      target.style.backgroundColor = 'black';
+      target.style.color = 'white';
+      this.value = 'day';
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while(i < alist.length) {
+        alist[i].style.color = 'powderblue';
+        i = i + 1;
+      }
+    }
+    else{
+      target.style.backgroundColor = 'white';
+      target.style.color = 'black';
+      this.value = 'night';
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while(i < alist.length) {
+        alist[i].style.color = 'blue';
+        i = i + 1;
+      }
+    }
+  "-->
+
+  <input type="button" value="night" onclick="
+    nightDayHandler(this);
+  ">
 
   <div id="grid">
     <ol>
