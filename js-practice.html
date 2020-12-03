@@ -5,6 +5,14 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
   <script>
+    function setColor(color){
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while(i < alist.length) {
+        alist[i].style.color = color;
+        i = i + 1;
+      }
+    }    
     // why this대신 self? this의 경우 script가 포함된 element를 가르킴.
     // 따라서 독립적으로 function을 만든 경우 '전역객체'를 가르킴.
     function nightDayHandler(self){  
@@ -13,23 +21,13 @@
         target.style.backgroundColor = 'black';
         target.style.color = 'white';
         self.value = 'day';
-        var alist = document.querySelectorAll('a');
-        var i = 0;
-        while(i < alist.length) {
-          alist[i].style.color = 'powderblue';
-          i = i + 1;
-        }
+        setColor('powderblue');
       }
       else{
         target.style.backgroundColor = 'white';
         target.style.color = 'black';
         self.value = 'night';
-        var alist = document.querySelectorAll('a');
-        var i = 0;
-        while(i < alist.length) {
-          alist[i].style.color = 'blue';
-          i = i + 1;
-        }
+        setColor('blue');
       }
     }
   </script>
